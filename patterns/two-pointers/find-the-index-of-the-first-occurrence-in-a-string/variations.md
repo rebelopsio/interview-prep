@@ -1,4 +1,4 @@
-# Find the Index of the First Occurrence in a String - Variations & Extensions
+# find-the-index-of-the-first-occurrence-in-a-string - Variations & Extensions
 
 ## Common Variations
 1. [Variation 1 description]

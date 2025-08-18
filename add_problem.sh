@@ -65,9 +65,17 @@ if [ $# -lt 2 ]; then
 fi
 
 PATTERN="$1"
-PROBLEM_NAME="$2"
+PROBLEM_NAME_RAW="$2"
 LEETCODE_NUMBER="${3:-}"
 DIFFICULTY="${4:-Medium}"
+
+# Normalize problem name: lowercase and replace spaces with hyphens
+PROBLEM_NAME=$(echo "$PROBLEM_NAME_RAW" | tr '[:upper:]' '[:lower:]' | sed 's/[[:space:]]/-/g' | sed 's/--*/-/g' | sed 's/^-\|-$//g')
+
+# Display the normalized name if it changed
+if [ "$PROBLEM_NAME" != "$PROBLEM_NAME_RAW" ]; then
+    print_info "Normalized problem name: '$PROBLEM_NAME_RAW' → '$PROBLEM_NAME'"
+fi
 
 # Validate we're in the right directory
 if [ ! -d "patterns" ]; then
@@ -108,8 +116,11 @@ print_status "Created directory: $PROBLEM_DIR"
 # Generate problem README
 print_info "Creating problem README..."
 
+# Use the original raw name for display purposes in the README
+DISPLAY_NAME=$(echo "$PROBLEM_NAME_RAW" | sed 's/\b\(.\)/\u\1/g')  # Title case
+
 cat > "$PROBLEM_DIR/README.md" << EOF
-# $PROBLEM_NAME
+# $DISPLAY_NAME
 
 **Difficulty**: $DIFFICULTY
 **Pattern**: $PATTERN
@@ -167,7 +178,7 @@ package main
 
 import "fmt"
 
-// $PROBLEM_NAME - $DIFFICULTY
+// $DISPLAY_NAME - $DIFFICULTY
 // Pattern: $PATTERN
 $([ -n "$LEETCODE_NUMBER" ] && echo "// LeetCode: $LEETCODE_NUMBER")
 
@@ -207,7 +218,7 @@ EOF
 print_info "Creating Rust solution template..."
 
 cat > "$PROBLEM_DIR/solution.rs" << EOF
-// $PROBLEM_NAME - $DIFFICULTY
+// $DISPLAY_NAME - $DIFFICULTY
 // Pattern: $PATTERN
 $([ -n "$LEETCODE_NUMBER" ] && echo "// LeetCode: $LEETCODE_NUMBER")
 
@@ -253,7 +264,7 @@ print_info "Creating Python solution template..."
 
 cat > "$PROBLEM_DIR/solution.py" << EOF
 """
-$PROBLEM_NAME - $DIFFICULTY
+$DISPLAY_NAME - $DIFFICULTY
 Pattern: $PATTERN
 $([ -n "$LEETCODE_NUMBER" ] && echo "LeetCode: $LEETCODE_NUMBER")
 """
@@ -296,7 +307,7 @@ EOF
 print_info "Creating notes files..."
 
 cat > "$PROBLEM_DIR/educative-notes.md" << EOF
-# Educative Notes - $PROBLEM_NAME
+# Educative Notes - $DISPLAY_NAME
 
 ## AI Code Mentor Insights
 [Record hints and guidance received from AI Code Mentor]
@@ -319,7 +330,7 @@ cat > "$PROBLEM_DIR/educative-notes.md" << EOF
 EOF
 
 cat > "$PROBLEM_DIR/neetcode-notes.md" << EOF
-# neetcode.io Notes - $PROBLEM_NAME
+# neetcode.io Notes - $DISPLAY_NAME
 
 ## Video Explanation Key Points
 [Main insights from video explanation]
