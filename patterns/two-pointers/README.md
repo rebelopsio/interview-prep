@@ -52,7 +52,7 @@ while left < right {
 - **Space**: O(1) - only using two pointers
 
 ## Problems Solved
-- [ ] Valid Palindrome (Easy)
+- [ ] Find the Index of the First Occurrence in a String (Easy) - [Link](Find the Index of the First Occurrence in a String/)- [ ] Valid Palindrome (Easy)
 - [ ] Two Sum II (Easy)
 - [ ] 3Sum (Medium)
 - [ ] Container With Most Water (Medium)
