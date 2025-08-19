@@ -4,13 +4,24 @@ Pattern: two-pointers
 LeetCode: 28
 """
 
-def solve():
-    """TODO: Implement solution"""
-    print("Solution not implemented yet")
-    pass
+def strStr(haystack: str, needle: str) -> int:
+    p1, p2 = 0, 0
+    while p2 < len(haystack):
+        if haystack[p1] == needle[0]:
+            for i in range(len(needle)):
+                if p2 < len(haystack) and haystack[p2] == needle[i]:
+                    p2 += 1
+                    if p2 - p1 == len(needle):
+                        return p1
+                else:
+                    break
+        p1 += 1
+        p2 = p1
+    return -1
 
 def main():
-    solve()
+    print(strStr("sadbutsad", "sad"))
+    print(strStr("leetcode", "leeto"))
 
 if __name__ == "__main__":
     main()
