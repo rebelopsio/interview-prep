@@ -52,7 +52,7 @@ while left < right {
 - **Space**: O(1) - only using two pointers
 
 ## Problems Solved
-- [ ] find-the-index-of-the-first-occurrence-in-a-string (Easy) - [Link](find-the-index-of-the-first-occurrence-in-a-string/)- [ ] Find the Index of the First Occurrence in a String (Easy) - [Link](Find the Index of the First Occurrence in a String/)- [ ] Valid Palindrome (Easy)
+- [ ] merge-sorted-array (Easy) - [Link](merge-sorted-array/)- [ ] valid-palindrome (Easy) - [Link](valid-palindrome/)- [ ] reverse-string (Easy) - [Link](reverse-string/)- [ ] find-the-index-of-the-first-occurrence-in-a-string (Easy) - [Link](find-the-index-of-the-first-occurrence-in-a-string/)- [ ] Find the Index of the First Occurrence in a String (Easy) - [Link](Find the Index of the First Occurrence in a String/)- [ ] Valid Palindrome (Easy)
 - [ ] Two Sum II (Easy)
 - [ ] 3Sum (Medium)
 - [ ] Container With Most Water (Medium)
@@ -60,5 +60,5 @@ while left < right {
 
 ## Resources
 - **Educative**: Grokking Coding Interview - Two Pointers
-- **Book Reference**: Alex Xu Chapter [X]
+- **Book Reference**: Alex Xu Chapter [1]
 - **neetcode.io**: Two Pointers playlist

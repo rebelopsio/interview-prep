@@ -3,13 +3,16 @@
 **Difficulty**: Easy
 **Pattern**: fast-slow-pointers
 **LeetCode**: 160
-**Educative**: [Course/Problem Reference]
+**Neetcode**: [Intersection of Two Linked Lists](https://neetcode.io/problems/intersection-of-two-linked-lists)
+**Educative**:
 
 ## Problem Statement
 Given the heads of two singly linked-lists headA and headB, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return null.
 
 ## Approach
-[Your strategy and thought process]
+Ok, this one was tricky and I don't think the solution matches the pattern.
+- Since we have two link lists of varying length, we are going to traverse each list, with their own pointers, and when we reach the end of each, we'll start at the head of the second list.
+- This allows us to create two even length lists as each will be len(m) + len(n) in length.
 
 ## Key Insights
 - [What you learned]
@@ -17,8 +20,8 @@ Given the heads of two singly linked-lists headA and headB, return the node at w
 - [Pattern recognition clues]
 
 ## Complexity
-- **Time**: O(?)
-- **Space**: O(?)
+- **Time**: O(m + n)
+- **Space**: O(1)
 
 ## Variations & Follow-ups
 - [Common variations of this problem]

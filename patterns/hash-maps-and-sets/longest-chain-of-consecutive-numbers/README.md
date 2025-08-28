@@ -1,18 +1,15 @@
-# Reverse String
+# Longest Chain of Consecutive Numuers
 
-**Difficulty**: Easy
-**Pattern**: two-pointers
-**Strategy**: inward traversal
-**LeetCode**: 344
+**Difficulty**: Medium
+**Pattern**: hash-maps-and-sets
+
 **Educative**: [Course/Problem Reference]
 
 ## Problem Statement
-[LeetCode - 344](https://leetcode.com/problems/reverse-string/)
+[Brief description or link to problem]
 
 ## Approach
-1. Use **inward traversal** strategy
-2. while loop with condition of left pointer being of lower value than right pointer
-3. So long as loop condition is true, swap the values at the pointers, increment left and decrement right value
+[Your strategy and thought process]
 
 ## Key Insights
 - [What you learned]
@@ -20,8 +17,8 @@
 - [Pattern recognition clues]
 
 ## Complexity
-- **Time**: O(n)
-- **Space**: O(1)
+- **Time**: O(?)
+- **Space**: O(?)
 
 ## Variations & Follow-ups
 - [Common variations of this problem]
@@ -31,12 +28,12 @@
 - [Similar problems to practice]
 
 ## Progress Checklist
-- [X] Understood the pattern
+- [ ] Understood the pattern
 - [ ] Solved without hints (Go)
 - [ ] Solved without hints (Rust)
-- [X] Solved without hints (Python)
-- [X] Optimized solution
-- [X] Can explain clearly
+- [ ] Solved without hints (Python)
+- [ ] Optimized solution
+- [ ] Can explain clearly
 - [ ] Solved under time pressure
 - [ ] Reviewed spaced repetition
 
