@@ -2,6 +2,7 @@
 
 **Difficulty**: Easy
 **Pattern**: two-pointers
+**Strategy**: reverse traversal
 **LeetCode**: 88
 **Educative**: [Course/Problem Reference]
 
