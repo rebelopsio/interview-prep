@@ -88,7 +88,9 @@ match node.next.as_ref() {
 - **Cycle Detection**: O(n) time, O(1) space with two pointers
 
 ## Problems Solved
-- [ ] remove-duplicates-from-sorted-list (Easy) - [Link](remove-duplicates-from-sorted-list/)- [ ] Reverse Linked List (Easy) - [206]
+- [ ] reverse-linked-list (Easy) - [Link](reverse-linked-list/)
+- [ ] remove-duplicates-from-sorted-list (Easy) - [Link](remove-duplicates-from-sorted-list/)
+- [ ] Reverse Linked List (Easy) - [206]
 - [ ] Merge Two Sorted Lists (Easy) - [21]
 - [ ] Linked List Cycle (Easy) - [141]
 - [ ] Middle of the Linked List (Easy) - [876]
