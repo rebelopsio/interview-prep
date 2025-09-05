@@ -5,20 +5,29 @@ import "fmt"
 // Pair Sum - Unsorted - Medium
 // Pattern: hash-maps-and-sets
 
-
-func solve() {
-    // TODO: Implement solution
-    fmt.Println("Solution not implemented yet")
+func twoSum(nums []int, target int) []int {
+	store := map[int]int{}
+	ans := []int{}
+	for i, v := range nums {
+		pair := target - v
+		idx, ok := store[pair]
+		if ok {
+			ans = append(ans, idx, i)
+		} else {
+			store[v] = i
+		}
+	}
+	return ans
 }
 
 func main() {
-    solve()
+	solve()
 }
 
 // Test cases
 func runTests() {
-    // TODO: Add test cases
-    fmt.Println("Tests not implemented yet")
+	// TODO: Add test cases
+	fmt.Println("Tests not implemented yet")
 }
 
 /*
