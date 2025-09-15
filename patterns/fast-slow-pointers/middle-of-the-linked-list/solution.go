@@ -6,19 +6,30 @@ import "fmt"
 // Pattern: fast-slow-pointers
 // LeetCode: 876
 
-func solve() {
-    // TODO: Implement solution
-    fmt.Println("Solution not implemented yet")
+/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */
+func middleNode(head *ListNode) *ListNode {
+	slow, fast := head, head
+	for fast != nil && fast.Next != nil {
+		slow = slow.Next
+		fast = fast.Next.Next
+	}
+	return slow
 }
 
 func main() {
-    solve()
+	solve()
 }
 
 // Test cases
 func runTests() {
-    // TODO: Add test cases
-    fmt.Println("Tests not implemented yet")
+	// TODO: Add test cases
+	fmt.Println("Tests not implemented yet")
 }
 
 /*
